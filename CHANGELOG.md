@@ -4,6 +4,14 @@ All notable changes to this skill are documented here.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this skill follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.8.1] — 2026-07-20
+
+### Changed
+- **Seed default bumped to `S0_BACKSTOP: 1.1.0`.** `templates/guardrails.lock` now seeds new libraries at the first harvest-measured backstop (upstream `s0-backstop-v1.1.0`, 2026-07-20 Opus 4.8 + Sonnet 5 pass), and `templates/guardrails/S0_backstop.md` reference copy refreshed to the 1.1.0 compiled-artifact body. No tooling change — `build-deploy-bundles.py` is unchanged (still `SCRIPT_VERSION` 1.8.0), so no migration is required; existing libraries adopt the new backstop the normal way, `--update-guardrails S0_BACKSTOP=1.1.0`. F0 (2.0.0) and S0 core (2.0.1) seed defaults are unchanged.
+
+### Driven by
+The first real harvest replacing recollection with measurement — the point of the whole system. Upstream: makegood-guardrails s0-backstop-v1.1.0.
+
 ## [1.8.0] — 2026-07-15
 
 ### Added
